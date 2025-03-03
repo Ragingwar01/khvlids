@@ -43,7 +43,7 @@ h1.glitch {
     transform: translateX(-100vw);
     animation: slideIn 1s forwards ease-in-out;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 @keyframes slideIn {
@@ -86,7 +86,7 @@ h1.glitch {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    z-index: 0; /* Ensures background stays behind content */
+    z-index: 1; /* Ensures background stays behind content */
     pointer-events: none;
     display: flex;
 }
@@ -98,16 +98,28 @@ h1.glitch {
     color: #00ff00;
     font-size: 1rem;
     white-space: nowrap;
-    opacity: 0.7;
+    opacity: 0.3; /* Reduce opacity to prevent distraction */
     writing-mode: vertical-rl;
     text-orientation: upright;
     animation: fall linear infinite;
     animation-duration: calc(5s + 3s * var(--speed));
+    filter: blur(2px); /* Adds blur to make it less obstructive */
 }
 
 @keyframes fall {
     from { transform: translateY(-100%); }
     to { transform: translateY(100vh); }
+}
+
+/* Reduce number of falling code streams for small screens */
+@media screen and (max-width: 768px) {
+    .background-animation {
+        display: flex;
+        justify-content: space-between;
+    }
+    .code-stream:nth-child(odd) {
+        display: none;
+    }
 }
 
 /* Allow scrolling */
@@ -125,7 +137,7 @@ html, body {
     border-radius: 10px;
     text-align: left;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .contact-form label {
