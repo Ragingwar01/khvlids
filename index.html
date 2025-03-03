@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation">
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const background = document.querySelector(".background-animation");
+    
+                for (let i = 0; i < 30; i++) {
+                    let stream = document.createElement("div");
+                    stream.classList.add("code-stream");
+                    stream.style.setProperty("--x", Math.random());
+                    stream.style.setProperty("--speed", Math.random());
+                    stream.innerText = "010101110101010101101010010101010110";
+                    background.appendChild(stream);
+                }
+            });
+        </script>
+    </div>
+    
+    <div class="container">
+        <h1 class="glitch">Khvlid's Hacker Portfolio</h1>
+        <p class="subtitle">Cybersecurity Enthusiast | Ethical Hacker | Coder</p>
+        
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate hacker specializing in cybersecurity, penetration testing, and coding. Welcome to my portfolio.</p>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><span>Project 1:</span> Network Penetration Testing</li>
+                <li><span>Project 2:</span> Secure Shell Exploitation</li>
+                <li><span>Project 3:</span> Ethical Hacking Challenges</li>
+            </ul>
+        </section>
+
+        <section class="kali-tools">
+            <h2>Basic Kali Linux Tools</h2>
+            <ul>
+                <li>
+                    <span>Nmap:</span> Used for network discovery and security auditing.
+                    <p><strong>Command:</strong> <code>nmap -A target-ip</code></p>
+                    <p>Scans a target for open ports and running services.</p>
+                </li>
+                <li>
+                    <span>Metasploit:</span> A powerful framework for penetration testing.
+                    <p><strong>Command:</strong> <code>msfconsole</code></p>
+                    <p>Launches the Metasploit framework for exploiting vulnerabilities.</p>
+                </li>
+                <li>
+                    <span>Aircrack-ng:</span> Used for assessing Wi-Fi network security.
+                    <p><strong>Command:</strong> <code>airmon-ng start wlan0</code></p>
+                    <p>Enables monitor mode to capture Wi-Fi packets for analysis.</p>
+                </li>
+                <li>
+                    <span>John the Ripper:</span> A fast password cracker.
+                    <p><strong>Command:</strong> <code>john --wordlist=passwords.txt hashes.txt</code></p>
+                    <p>Uses a wordlist to crack hashed passwords.</p>
+                </li>
+                <li>
+                    <span>Burp Suite:</span> A tool for web vulnerability scanning.
+                    <p><strong>Command:</strong> <code>burpsuite</code></p>
+                    <p>Opens the Burp Suite GUI for intercepting and analyzing web traffic.</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+    
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    
+</body>
+</html>
